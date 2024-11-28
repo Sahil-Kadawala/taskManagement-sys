@@ -14,6 +14,7 @@ A simple task management application built with Node.js, Express, and MongoDB th
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [MongoDB](https://www.mongodb.com/try/download/community)
 - npm (comes with Node.js)
@@ -23,4 +24,5 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Install nodemon: `npm install nodemon`
-4. Start the application: `nodemon app.js`
+4. `cd init` then run `node index.js` for dummy data to start with
+5. Start the application: `nodemon app.js`
