@@ -1,0 +1,66 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h1>Add New Task</h1>
+      <form
+        action="/api/tasks"
+        method="post"
+        novalidate
+        class="needs-validation"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            class="form-control"
+            type="text"
+            name="task[title]"
+            placeholder="Add a title"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Title should be valid</div>
+        </div>
+
+        <div class="mb-3 form-desc">
+          <label for="desc" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            name="task[desc]"
+            placeholder="Enter Description"
+          ></textarea>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Description should be valid</div>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="dueDate" class="form-label">Due Date</label>
+            <input
+              class="form-control"
+              type="date"
+              name="task[dueDate]"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Dates should be valid</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="status" class="form-label">Status</label>
+            <input
+              class="form-control"
+              type="text"
+              name="task[status]"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Status should be valid</div>
+          </div>
+        </div>
+
+        <button class="btn btn-dark mt-1 edit-btn">Add</button>
+      </form>
+    </div>
+  </div>
+</body>

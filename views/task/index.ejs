@@ -1,0 +1,15 @@
+<% layout("layouts/boilerplate") %>
+<body>
+  <h1>All Tasks</h1>
+  <!-- <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1"> -->
+  <div class="list-group">
+    <%for(task of alltasks) { %> <% if(task.status === "pending"){ %>
+    <a
+      href="/api/tasks/<%= task._id %>"
+      class="list-group-item list-group-item-action"
+    >
+      <%= task.title %></a
+    >
+    <% } %> <%}%>
+  </div>
+</body>
